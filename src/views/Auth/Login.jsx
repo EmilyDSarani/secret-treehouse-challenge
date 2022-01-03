@@ -20,7 +20,7 @@ export default function Login() {
     const loginWasSuccessful = auth.login(formState.email, formState.password);
 
     return !loginWasSuccessful ?
-     <h4 className={styles.error}>{error}</h4>
+     setError('these are not the droids you are looking for')
     : history.replace(from)
 
     // TODO: If login was unsuccessful, set an error with a message
